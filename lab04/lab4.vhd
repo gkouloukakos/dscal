@@ -16,12 +16,12 @@ end entity Counter;
 
 architecture Behavioral of Counter is
 
---27 = 1.37*10^8
+--27 = 1.37*10^8 so 28 bits are enough
 signal internal_clk  : UNSIGNED(27 downto 0) := (others => '0'); 
 signal digit         : UNSIGNED(3 downto 0)  := (others => '0');
 signal upper_limit   : UNSIGNED(3 downto 0)  := "1001"; 
 signal lower_limit   : UNSIGNED(3 downto 0)  := "0000";
-signal clock_one_sec : STD_LOGIC ;
+signal clock_one_sec : STD_LOGIC := '0';
 
 begin
     
