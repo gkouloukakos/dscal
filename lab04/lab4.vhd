@@ -32,7 +32,7 @@ begin
             internal_clk <= (others => '0');
             clock_one_sec <= '0';
         elsif rising_edge(clk) then 
-            if internal_clk = to_unsigned(99999999, 27) then
+            if internal_clk = to_unsigned(99999999, 28) then
                 clock_one_sec <= not clock_one_sec;
                 internal_clk <= (others => '0');
             else
